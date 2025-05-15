@@ -1,1 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
 .env
+venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.pytest_cache/
+migrations/__pycache__/
+.mypy_cache/
