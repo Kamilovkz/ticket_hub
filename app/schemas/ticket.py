@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 class TicketCreate(BaseModel):
     title: str
-    description: str
+    description: str | None = None
 
 class TicketRead(BaseModel):
     id: int
