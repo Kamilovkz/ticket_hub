@@ -1,7 +1,7 @@
 from fastapi import FastAPI
+from app.api import api_router, include_router
 
-app = FastAPI()
+app = FastAPI(title="TicketHub API", version="1.0.0")
 
-@app.get("/")
-async def root():
-    return {"message": "TicketHub API is running!"}
+include_router()
+app.include_router(api_router)
