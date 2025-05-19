@@ -8,6 +8,7 @@ router = APIRouter()
 
 @router.post("/tickets/", response_model=TicketRead)
 def create_ticket(ticket: TicketCreate, db: Session = Depends(get_db)):
+    #TODO: Implement ticket creation logic
     new_ticket = Ticket(**ticket.dict(), user_id=1) # Assuming user_id is 1 for demo purposes
 
     db.add(new_ticket)
