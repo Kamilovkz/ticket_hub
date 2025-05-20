@@ -1,5 +1,6 @@
 import asyncio
 from app.core.database import engine, Base
+from app.models import Ticket
 
 async def init_models():
     async with engine.begin() as conn:
