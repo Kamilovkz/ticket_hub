@@ -1,8 +1,10 @@
+from datetime import datetime
 from pydantic import BaseModel
 
 class TicketCreate(BaseModel):
     title: str
     description: str | None = None
+    date: datetime = datetime.utcnow()
 
 class TicketRead(BaseModel):
     id: int
